@@ -1,0 +1,99 @@
+<!-- 
+<div class="table"><mat-card>
+    <mat-card-content>
+      <div class="cont">
+       
+      </div>
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">S/n</th>
+            <th scope="col">ORDER ID</th>
+            <th scope="col">CUSTOMER ID</th>
+            <th scope="col">CUSTOMER FNAME</th>
+            <th scope="col">CUSTOMER LNAME</th>
+            <th scope="col">PACKAGE ID</th>
+            <th scope="col">PACKAGE NAME</th>
+            <th scope="col">COST</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr  >
+                <td></td>
+                <td></td>
+                <td></td>
+                  <td></td>
+                  <td></td>
+                  <td></td> 
+                  <td></td>
+                  <td></td>
+                </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+  </div>
+   -->
+  
+
+    
+      
+   <div class="d-flex justify-content-center">
+    <img src="assets/img/nne.jpg" alt="" style="height: 100px; width: 100px;">
+</div>
+<div class="d-flex justify-content-center">
+    <h2> ZANZIBAR TOURISM COMPANY</h2>
+</div>
+<div class="d-flex justify-content-center" >
+    <div class="line">
+
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <h2>MY TOUR</h2>
+</div>
+<div class="d-flex justify-content-center" >
+    <div class="line">
+    </div>
+</div>
+<div class="d-flex justify-content-center">
+    <h2>Email:Mytour@gmail.com</h2>
+</div>
+<div class="d-flex justify-content-center">
+    <h2>Zanzibar Tanzania</h2>
+</div>
+
+<div class="d-flex justify-content-center">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+      
+      
+        <th scope="col">CUSTOMER ID</th>
+        <th scope="col">CUSTOMER FNAME</th>
+        <th scope="col">CUSTOMER LNAME</th>
+        
+        <th scope="col">PACKAGE NAME</th>
+        <th scope="col">COST</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor = "let p of customer"  >
+            <td>{{p.id}}</td>
+            <td>{{p.firstname}}</td>
+            <td>{{p.lastname}}</td>
+              
+              <td>{{p.name}}</td>
+              <td>{{p.cost}}</td>
+              <td></td> 
+             
+            </tr>
+            
+    </tbody>
+  </table>
+</div>
+
+      
+    
+  

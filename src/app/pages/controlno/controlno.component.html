@@ -1,0 +1,55 @@
+
+<div class="table"><mat-card>
+    <mat-card-content>
+      <div class="cont">
+        <div class="but">
+          <button mat-raised-button (click)="openAddControlno()" >Add control</button>
+        </div>
+      </div>
+      
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th scope="col">S/N</th>
+            <th scope="col">control number</th>
+            </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let cont of Viewcontrol">
+            <td>{{cont.id}}</td>
+            <td>{{cont.controlno}}</td>
+            
+  
+  
+          </tr>
+        </tbody>
+      </table>
+    </mat-card-content>
+  </mat-card>
+  </div>
+  
+  <ng-template #addform>
+    <form [formGroup]="ControlForm">
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="example-full-width" appearance="fill">
+            <mat-label>control number</mat-label>
+            <input matInput placeholder="contol number" formControlName="controlno">
+          </mat-form-field>
+        </div>
+        
+      </div>
+      
+    
+        <div class="Button">
+          <button class="Add control" type="submit"(click)="saveControlnum()">Add controlno</button>
+        </div>
+      
+    </form>
+  </ng-template>
+    
+      
+   
+      
+    
+  

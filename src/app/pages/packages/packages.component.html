@@ -1,0 +1,94 @@
+ <div class="table"><mat-card>
+  <mat-card-content>
+    <div class="cont">
+      <div class="but">
+        <button mat-raised-button (click)="openAddPackage()">Add packages</button>
+      </div>
+    </div>
+    
+    <table class="table table-striped">
+      <thead>
+        <tr>
+          <th scope="col">S/N</th>
+          <th scope="col">Name</th>
+          <th scope="col">Cost</th>
+          <th scope="col">Description</th>
+          <th scope="col">Startdate</th>
+          <th scope="col">Finishdate</th>
+          <th scope="col">image</th>
+  
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let packag of packegas">
+          <td>{{packag.id}}</td>
+          <td>{{packag.name}}</td>
+          <td>{{packag.cost}}</td>
+          <td>{{packag.description}}</td>
+          <td>{{packag.startdate}}</td>
+          <td>{{packag.finishdate}}</td>
+          <td><img [src]="'data:image/jpg;base64,'+packag.image" alt="" style="width: 64px; height:64px;"></td>
+
+          <td><button mat-raised-button (click)="OnEdit(packag)">Edit </button></td>
+          <td><button mat-raised-button (click)="OnDelete(packag.id)">Delete </button></td>
+
+
+        </tr>
+      </tbody>
+    </table>
+  </mat-card-content>
+</mat-card>
+</div>
+
+<ng-template #addform>
+  <form [formGroup]="packageform">
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Package name</mat-label>
+          <input matInput placeholder="Ex. Pizza" formControlName="name">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Cost</mat-label>
+          <input matInput placeholder="Ex. Pizza" formControlName="cost">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Description</mat-label>
+          <input matInput placeholder="Ex. Pizza" formControlName="description">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Start date</mat-label>
+          <input matInput type="date" class="form-control" formControlName="startdate">
+        </mat-form-field>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Finish date</mat-label>
+          <input matInput type="date"  class="form-control" formControlName="finishdate">
+        </mat-form-field>
+      </div>
+      <div class="col">
+        <label for="image">image</label>
+          <input type="file"  class="form-control"  (change)="onFileChanged($event)">
+      </div>
+      <div class="Button">
+        <button class="Add packages" type="submit"(click)="savepackages()">Add packages</button>
+      </div>
+    </div>
+  </form>
+</ng-template>
+  
+    
+  
+    
+  

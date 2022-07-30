@@ -1,0 +1,44 @@
+
+<html>
+    <form [formGroup]="updateform">
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Package name</mat-label>
+              <input matInput placeholder="Ex. Pizza" formControlName="name">
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Cost</mat-label>
+              <input matInput placeholder="Ex. Pizza" formControlName="cost">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Description</mat-label>
+              <input matInput placeholder="Ex. Pizza" formControlName="description">
+            </mat-form-field>
+          </div>
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Start date</mat-label>
+              <input matInput type="date" class="form-control" formControlName="startdate">
+            </mat-form-field>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <mat-form-field class="example-full-width" appearance="fill">
+              <mat-label>Finish date</mat-label>
+              <input matInput type="date"  class="form-control" formControlName="finishdate">
+            </mat-form-field>
+          </div>
+          <div class="Button">
+            <button class="Update package" type="submit"(click)="updatepackages()">Udate packages</button>
+          </div>
+        </div>
+      </form>
+</html>

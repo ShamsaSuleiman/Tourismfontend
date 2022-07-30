@@ -1,0 +1,24 @@
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">S/n</th>
+        <th scope="col">FIRST NAME</th>
+        <th scope="col">LAST NAME</th>
+        <th scope="col">MOBILE NUMBER</th>
+        <th scope="col">EMAIL</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let cus of CustomerData">
+      <td>{{cus.id}}</td>
+      <td>{{cus.firstname}}</td>
+        <td>{{cus.lastname}}</td>
+        <td>{{cus.mobile_no}}</td>
+        <td>{{cus.email}}</td> 
+      </tr>
+    </tbody>
+    </table>
+        
+
+           
